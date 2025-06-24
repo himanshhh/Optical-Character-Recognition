@@ -1,45 +1,56 @@
-# Optical-Character-Recognition-for-Invoice-Images
+# 🧾 Invoice OCR System  
 
-# Invoice OCR System
+---
 
-## Project Overview
-This project is an *Optical Character Recognition (OCR) system for invoice processing. It extracts key invoice details such as **invoice number, date, and total amount* from images and stores them in a *MySQL database*. The system supports invoices from multiple companies (Amazon, Flipkart, Myntra) and prevents duplicate entries by using the invoice number as the primary key.
+## 📌 Project Overview
 
-## Features
-- *Invoice Image Preprocessing*: Converts images to grayscale, applies Gaussian blur, and uses thresholding for better OCR results.
-- *OCR Extraction*: Uses Tesseract OCR to extract invoice number, date, and total amount.
-- *Pattern Matching*: Uses regular expressions to correctly identify invoice components.
-- *Database Integration*: Stores extracted data in a MySQL database with duplicate entry prevention.
-- *Visual Output*: Displays bounding boxes around detected invoice details for verification.
+This project is an **Optical Character Recognition (OCR)** system for invoice processing. It extracts key invoice details such as **invoice number**, **date**, and **total amount** from images and stores them in a **MySQL database**.
 
-## Project Structure
+The system supports invoices from multiple companies (*Amazon, Flipkart, Myntra*) and prevents duplicate entries by using the invoice number as the primary key.
 
-Invoice-OCR/
-│── OCR_Packaged_Final_Multiple_Templates.py           # Main OCR processing script and data storage script
-│── requirements.txt         # Required Python packages
-│── README.md                # Project documentation
-│── images/
-│   |── amazon_ie.png  # Invoice sample (Ireland)
-│   |── amazon_us.png  # Invoice sample (US)
-│   │── amazon_ie_boxes.png  # Processed invoice sample (Ireland)
-│   │── amazon_us_boxes.png  # Processed invoice sample (US)
-│   │── invoices_db.png      # Screenshot of MySQL database
+---
 
+## ⚙️ Tools & Technologies Used
 
-## Installation
-### Prerequisites
-Ensure you have the following installed:
-- Python (>=3.7)
-- MySQL Server & MySQL Workbench
-- Tesseract OCR (installed and added to the system path)
-- Required Python libraries
+| Category              | Tools / Technologies                            |
+|----------------------|--------------------------------------------------|
+| Programming Language | Python (≥ 3.7)                                   |
+| OCR Engine           | Tesseract OCR                                    |
+| Database             | MySQL Server & MySQL Workbench                   |
+| Libraries & Packages | OpenCV, pytesseract, regex, mysql-connector      |
+| Development Tools    | VS Code, Terminal/Command Line                   |
 
-### Install Dependencies
-sh
+---
+
+## 🚀 Features
+
+- **Invoice Image Preprocessing**: Converts images to grayscale, applies Gaussian blur, and uses thresholding for better OCR results.  
+- **OCR Extraction**: Utilizes Tesseract OCR to extract invoice number, date, and total amount.  
+- **Pattern Matching**: Employs regular expressions to accurately identify invoice components.  
+- **Database Integration**: Saves extracted data into a MySQL database while preventing duplicates via unique invoice numbers.  
+- **Visual Output**: Displays bounding boxes on detected text elements for visual verification.
+
+---
+
+## 🧰 Installation & Setup
+
+### ✅ Prerequisites
+
+Make sure the following are installed:
+
+- Python ≥ 3.7  
+- MySQL Server & MySQL Workbench  
+- Tesseract OCR (installed and added to system path)  
+- Required Python packages  
+
+### 📦 Install Dependencies
+
+bash
 pip install -r requirements.txt
 
+---
 
-## Usage
+## 🛠️ How to Use
 ### 1. Run the OCR System
 sh
 OCR_Packaged_Final_Multiple_Templates.py
@@ -53,6 +64,7 @@ To view the stored data, open *MySQL Workbench* and run:
 sql
 SELECT * FROM invoices;
 
+---
 
 ## Database Schema
 The extracted invoice details are stored in a MySQL table named invoices:
@@ -65,23 +77,31 @@ CREATE TABLE invoices (
     total_amount VARCHAR(50)
 );
 
+---
 
-## Screenshots
-### OCR Processed Invoice Samples
+## 🖼️ Screenshots
+
+### ✅ OCR Processed Invoice Samples
+
 #### Amazon Invoice (Ireland)
 ![Amazon IE Invoice](amazon_ie_boxes.png)
 
 #### Amazon Invoice (US)
 ![Amazon US Invoice](amazon_us_boxes.png)
 
-### MySQL Database
+### 🗃️ MySQL Database Screenshot
 ![Invoices Database](invoices_db.png)
 
-## Future Enhancements
-- Improve total amount extraction to handle multiple currency formats more accurately.
-- Add support for additional invoice templates.
-- Implement a web-based UI for easy invoice uploading and data visualization.
+---
 
+## 🚧 Future Enhancements
 
-## Contact
+- Improve total amount extraction to support more currency formats.  
+- Add support for additional invoice templates.  
+- Build a web-based UI for uploading invoices and viewing results.
+
+---
+
+## 📬 Contact
+
 For any issues or contributions, feel free to reach out or create a pull request on GitHub.
