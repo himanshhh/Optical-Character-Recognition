@@ -53,7 +53,7 @@ pip install -r requirements.txt
 ## 🛠️ How to Use
 ### 1. Run the OCR System
 ```sh
-OCR_Packaged_Final_Multiple_Templates.py
+python OCR_Packaged_Final_Multiple_Templates.py
 ```
 - The script will prompt you to enter the company name (*Amazon, Flipkart, or Myntra*).
 - It will process the invoice image, extract relevant details, and store them in the database.
