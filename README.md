@@ -45,9 +45,9 @@ Make sure the following are installed:
 
 ### 📦 Install Dependencies
 
-bash
+```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ## 🛠️ How to Use
@@ -61,14 +61,14 @@ OCR_Packaged_Final_Multiple_Templates.py
 
 ### 2. Viewing Extracted Data
 To view the stored data, open *MySQL Workbench* and run:
-sql
+```sql
 SELECT * FROM invoices;
-
+```
 ---
 
 ## Database Schema
 The extracted invoice details are stored in a MySQL table named invoices:
-sql
+```sql
 CREATE TABLE invoices (
     id INT AUTO_INCREMENT PRIMARY KEY,
     company VARCHAR(255),
@@ -76,7 +76,7 @@ CREATE TABLE invoices (
     invoice_date DATE,
     total_amount VARCHAR(50)
 );
-
+```
 ---
 
 ## 🖼️ Screenshots
